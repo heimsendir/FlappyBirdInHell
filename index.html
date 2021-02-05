@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <title>Flappy</title>
+    <style>
+
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #gameOver {
+            left: 0px;
+            top: -130px;
+            bottom: 0;
+            width: 287px;
+            height: 512px;
+            z-index: 50;
+            text-align: center;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        #blink-2 {
+            color: #000000;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            animation: blur .75s ease-out infinite;
+            text-shadow: text-shadow: 0 0 5px #ff1312, 0 0 7px #ff1312;
+            margin-top: 50px;
+
+        }
+
+        @keyframes blur {
+            from {
+                text-shadow: 0px 0px 10px #ff1c19,
+                0px 0px 10px #ff1312,
+                0px 0px 25px #000000,
+                0px 0px 25px #000000,
+                0px 0px 25px #ff1312,
+                0px 0px 25px #ff1312,
+                0px 0px 25px #000000,
+                0px 0px 25px #000000,
+                0px 0px 50px #ff1312,
+                0px 0px 50px #ff1c19,
+                0px 0px 50px #000000,
+                0px 0px 150px #000000,
+                0px 10px 100px #ff1312,
+                0px 10px 100px #ff1c19,
+                0px 10px 100px #000000,
+                0px 10px 100px #000000,
+                0px -10px 100px #ff1312,
+                0px -10px 100px #ff1312;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<canvas id="canvas" width="288" height="512"></canvas>
+<dialog id="gameOver">
+    <p id="blink-2">GAME OVER</p>
+</dialog>
+<script src="js/game.js"></script>
+
+</body>
+</html>
